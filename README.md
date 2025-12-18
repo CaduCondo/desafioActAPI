@@ -9,8 +9,6 @@ Este repositório apresenta uma solução robusta para o desafio técnico de aut
 | Requisito | Versão Mínima | Finalidade |
 | :--- | :--- | :--- |
 | **Python** | 3.10+ | Linguagem base do projeto |
-| **Google Chrome** | Atualizada | Navegador para execução Web local |
-| **ChromeDriver** | Compatível | Driver para comunicação com o browser |
 
 ### 📥 Instalação
 1. Clone o repositório.
