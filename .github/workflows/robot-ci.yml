@@ -7,39 +7,48 @@ on:
     branches: [ "main", "master" ]
 
 jobs:
-  test:
+  robot-tests:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: 📥 Checkout do repositório
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: 🐍 Configurar Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
-      - name: Install dependencies
+      - name: 📦 Instalar dependências
         run: |
-          python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Robot Framework Tests
-        # O ponto (.) ao final indica para rodar os testes de Web e API
-        run: |
-          python -m robot -d results -v BROWSER:headlesschrome .
-        # Usamos continue-on-error para garantir que o upload do report aconteça
-        continue-on-error: true
+      - name: 🌐 Instalar Google Chrome
+        uses: browser-actions/setup-chrome@v1
 
-      - name: Upload Test Report
-        uses: actions/upload-artifact@v4
+      - name: ▶️ Executar testes Robot Framework
+        run: |
+          robot -d results .
+
+      - name: 📊 Publicar resumo no Workflow
         if: always()
+        run: |
+          echo "## 🧪 Resultado dos Testes Robot Framework" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- 📄 Relatório HTML: report.html" >> $GITHUB_STEP_SUMMARY
+          echo "- 📜 Log detalhado: log.html" >> $GITHUB_STEP_SUMMARY
+          echo "- 📦 Artifact com evidências gerado" >> $GITHUB_STEP_SUMMARY
+
+      - name: 📦 Publicar Artifact do relatório
+        if: always()
+        uses: actions/upload-artifact@v4
         with:
-          name: robot-test-report
+          name: robot-framework-report
           path: results/
 
-      - name: GitHub Summary Report
+      - name: 🌍 Publicar relatório no GitHub Pages
         if: always()
-        run: |
-          echo "## 📊 Relatório de Automação" >> $GITHUB_STEP_SUMMARY
-          echo "Os testes foram finalizados. Baixe o artefato para ver os logs e screenshots." >> $GITHUB_STEP_SUMMARY
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: results
