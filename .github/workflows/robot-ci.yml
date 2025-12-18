@@ -1,0 +1,45 @@
+name: Robot Framework CI
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Robot Framework Tests
+        # O ponto (.) ao final indica para rodar os testes de Web e API
+        run: |
+          python -m robot -d results -v BROWSER:headlesschrome .
+        # Usamos continue-on-error para garantir que o upload do report aconteça
+        continue-on-error: true
+
+      - name: Upload Test Report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: robot-test-report
+          path: results/
+
+      - name: GitHub Summary Report
+        if: always()
+        run: |
+          echo "## 📊 Relatório de Automação" >> $GITHUB_STEP_SUMMARY
+          echo "Os testes foram finalizados. Baixe o artefato para ver os logs e screenshots." >> $GITHUB_STEP_SUMMARY
