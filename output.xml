@@ -1,320 +1,320 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4 (Python 3.10.19 on linux)" generated="2025-12-18T16:15:32.357265" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4 (Python 3.10.19 on linux)" generated="2025-12-18T16:22:02.849863" rpa="false" schemaversion="5">
 <suite id="s1" name="desafioActAPI" source="/home/runner/work/desafioActAPI/desafioActAPI">
 <suite id="s1-s1" name="Tests" source="/home/runner/work/desafioActAPI/desafioActAPI/tests">
 <suite id="s1-s1-s1" name="Api" source="/home/runner/work/desafioActAPI/desafioActAPI/tests/api">
 <suite id="s1-s1-s1-s1" name="Dog Api" source="/home/runner/work/desafioActAPI/desafioActAPI/tests/api/dog_api.robot">
 <kw name="Criar Sessão Dog API" owner="dog_api_keywords" type="SETUP">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-12-18T16:15:32.457899" level="INFO">Creating Session using : alias=dog_api, url=https://dog.ceo/api, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2025-12-18T16:22:02.954480" level="INFO">Creating Session using : alias=dog_api, url=https://dog.ceo/api, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>dog_api</arg>
 <arg>${BASE_URL}</arg>
 <arg>disable_warnings=1</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-12-18T16:15:32.457487" elapsed="0.000682"/>
+<status status="PASS" start="2025-12-18T16:22:02.954108" elapsed="0.000605"/>
 </kw>
-<status status="PASS" start="2025-12-18T16:15:32.456878" elapsed="0.001395"/>
+<status status="PASS" start="2025-12-18T16:22:02.953548" elapsed="0.001260"/>
 </kw>
 <test id="s1-s1-s1-s1-t1" name="Cenário 01: Listar todas as raças com sucesso" line="6">
 <kw name="Listar todas as raças" owner="dog_api_keywords">
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2025-12-18T16:15:32.861090" level="INFO">GET Request : url=https://dog.ceo/api/breeds/list/all 
+<msg time="2025-12-18T16:22:03.406616" level="INFO">GET Request : url=https://dog.ceo/api/breeds/list/all 
  path_url=/api/breeds/list/all 
  headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2025-12-18T16:15:32.861267" level="INFO">GET Response : url=https://dog.ceo/api/breeds/list/all 
+<msg time="2025-12-18T16:22:03.406776" level="INFO">GET Response : url=https://dog.ceo/api/breeds/list/all 
  status=200, reason=OK 
- headers={'Date': 'Thu, 18 Dec 2025 16:15:32 GMT', 'Content-Type': 'application/json', 'Content-Length': '1057', 'Connection': 'keep-alive', 'Server': 'cloudflare', 'X-Powered-By': 'PHP/8.3.28', 'Access-Control-Allow-Origin': '*', 'Content-Encoding': 'gzip', 'Via': '1.1 varnish (Varnish/6.3), 1.1 varnish (Varnish/6.3)', 'Cache-Control': 'max-age=1800', 'X-Cache-Age': '10982', 'X-Cache-Hits': '3055', 'X-Cache': 'HIT', 'Accept-Ranges': 'bytes', 'Age': '0', 'Vary': 'Accept-Encoding', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'cf-cache-status': 'DYNAMIC', 'Speculation-Rules': '"/cdn-cgi/speculation"', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=9ikWZYuJlGuIVMjh%2FjJKbcv6lwmxGoPa3P2GqFVPg8Q%2BeR6c0ECMXCIoAOjFt1FVRF9CoQtUuod5il7M1zcLfdvNcvAdYEA%3D"}]}', 'CF-RAY': '9afff5a53e7c39ff-YYZ', 'alt-svc': 'h3=":443"; ma=86400'} 
+ headers={'Date': 'Thu, 18 Dec 2025 16:22:03 GMT', 'Content-Type': 'application/json', 'Content-Length': '1057', 'Connection': 'keep-alive', 'Server': 'cloudflare', 'X-Powered-By': 'PHP/8.3.28', 'Access-Control-Allow-Origin': '*', 'Content-Encoding': 'gzip', 'Via': '1.1 varnish (Varnish/6.3), 1.1 varnish (Varnish/6.3)', 'Cache-Control': 'max-age=1800', 'X-Cache-Age': '11372', 'X-Cache-Hits': '3182', 'X-Cache': 'HIT', 'Accept-Ranges': 'bytes', 'Age': '0', 'Vary': 'Accept-Encoding', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'cf-cache-status': 'DYNAMIC', 'Speculation-Rules': '"/cdn-cgi/speculation"', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=1R3BPGSgIXRiYsg%2Bj%2B9qW95qJUebsXZgZEZug405dNYPOTimzTzTpIw7H8hfIANYPb3U9Zg5i95wR0Ht9mrxQa%2FOMBirdr8%3D"}]}', 'CF-RAY': '9affff2e0fe48233-IAD', 'alt-svc': 'h3=":443"; ma=86400'} 
  body={"message":{"affenpinscher":[],"african":["wild"],"airedale":[],"akita":[],"appenzeller":[],"australian":["kelpie","shepherd"],"bakharwal":["indian"],"basenji":[],"beagle":[],"bluetick":[],"borzoi":[],"bouvier":[],"boxer":[],"brabancon":[],"briard":[],"buhund":["norwegian"],"bulldog":["boston","english","french"],"bullterrier":["staffordshire"],"cattledog":["australian"],"cavapoo":[],"chihuahua":[],"chippiparai":["indian"],"chow":[],"clumber":[],"cockapoo":[],"collie":["border"],"coonhound":[],"corgi":["cardigan"],"cotondetulear":[],"dachshund":[],"dalmatian":[],"dane":["great"],"danish":["swedish"],"deerhound":["scottish"],"dhole":[],"dingo":[],"doberman":[],"elkhound":["norwegian"],"entlebucher":[],"eskimo":[],"finnish":["lapphund"],"frise":["bichon"],"gaddi":["indian"],"german":["shepherd"],"greyhound":["indian","italian"],"groenendael":[],"havanese":[],"hound":["afghan","basset","blood","english","ibizan","plott","walker"],"husky":[],"keeshond":[],"kelpie":[],"kombai":[],"komondor":[],"kuvasz":[],"labradoodle":[],"labrador":[],"leonberg":[],"lhasa":[],"malamute":[],"malinois":[],"maltese":[],"mastiff":["bull","english","indian","tibetan"],"mexicanhairless":[],"mix":[],"mountain":["bernese","swiss"],"mudhol":["indian"],"newfoundland":[],"otterhound":[],"ovcharka":["caucasian"],"papillon":[],"pariah":["indian"],"pekinese":[],"pembroke":[],"pinscher":["miniature"],"pitbull":[],"pointer":["german","germanlonghair"],"pomeranian":[],"poodle":["medium","miniature","standard","toy"],"pug":[],"puggle":[],"pyrenees":[],"rajapalayam":["indian"],"redbone":[],"retriever":["chesapeake","curly","flatcoated","golden"],"ridgeback":["rhodesian"],"rottweiler":[],"rough":["collie"],"saluki":[],"samoyed":[],"schipperke":[],"schnauzer":["giant","miniature"],"segugio":["italian"],"setter":["english","gordon","irish"],"sharpei":[],"sheepdog":["english","indian","shetland"],"shiba":[],"shihtzu":[],"spaniel":["blenheim","brittany","cocker","irish","japanese","sussex","welsh"],"spitz":["indian","japanese"],"springer":["english"],"stbernard":[],"terrier":["american","andalusian","australian","bedlington","border","boston","cairn","dandie","fox","irish","kerryblue","lakeland","norfolk","norwich","patterdale","russell","scottish","sealyham","silky","tibetan","toy","welsh","westhighland","wheaten","yorkshire"],"tervuren":[],"vizsla":[],"waterdog":["spanish"],"weimaraner":[],"whippet":[],"wolfhound":["irish"]},"status":"success"} 
  </msg>
-<msg time="2025-12-18T16:15:32.861458" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2025-12-18T16:22:03.406958" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>dog_api</arg>
 <arg>/breeds/list/all</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-12-18T16:15:32.459080" elapsed="0.402411"/>
+<status status="PASS" start="2025-12-18T16:22:02.955587" elapsed="0.451404"/>
 </kw>
 <return>
 <value>${response}</value>
-<status status="PASS" start="2025-12-18T16:15:32.861605" elapsed="0.000075"/>
+<status status="PASS" start="2025-12-18T16:22:03.407080" elapsed="0.000065"/>
 </return>
-<msg time="2025-12-18T16:15:32.861868" level="INFO">${res} = &lt;Response [200]&gt;</msg>
+<msg time="2025-12-18T16:22:03.407344" level="INFO">${res} = &lt;Response [200]&gt;</msg>
 <var>${res}</var>
-<status status="PASS" start="2025-12-18T16:15:32.458823" elapsed="0.403074"/>
+<status status="PASS" start="2025-12-18T16:22:02.955344" elapsed="0.452029"/>
 </kw>
 <kw name="Validar Estrutura de Sucesso" owner="dog_api_keywords">
 <kw name="Should Be Equal As Numbers" owner="BuiltIn">
-<msg time="2025-12-18T16:15:32.863190" level="INFO">Argument types are:
+<msg time="2025-12-18T16:22:03.408640" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${response.status_code}</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<status status="PASS" start="2025-12-18T16:15:32.862500" elapsed="0.000763"/>
+<status status="PASS" start="2025-12-18T16:22:03.407968" elapsed="0.000745"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${response.json()}[status]</arg>
 <arg>success</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-12-18T16:15:32.863380" elapsed="0.000648"/>
+<status status="PASS" start="2025-12-18T16:22:03.408828" elapsed="0.000643"/>
 </kw>
 <arg>${res}</arg>
-<status status="PASS" start="2025-12-18T16:15:32.862133" elapsed="0.001960"/>
+<status status="PASS" start="2025-12-18T16:22:03.407595" elapsed="0.001942"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2025-12-18T16:15:32.864938" level="INFO">Length is 108.</msg>
-<msg time="2025-12-18T16:15:32.865036" level="INFO">${total_racas} = 108</msg>
+<msg time="2025-12-18T16:22:03.410396" level="INFO">Length is 108.</msg>
+<msg time="2025-12-18T16:22:03.410497" level="INFO">${total_racas} = 108</msg>
 <var>${total_racas}</var>
 <arg>${res.json()}[message]</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2025-12-18T16:15:32.864204" elapsed="0.000859"/>
+<status status="PASS" start="2025-12-18T16:22:03.409648" elapsed="0.000876"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>${total_racas} &gt; 0</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2025-12-18T16:15:32.865184" elapsed="0.001460"/>
+<status status="PASS" start="2025-12-18T16:22:03.410641" elapsed="0.001339"/>
 </kw>
-<status status="PASS" start="2025-12-18T16:15:32.458345" elapsed="0.408448"/>
+<status status="PASS" start="2025-12-18T16:22:02.954876" elapsed="0.457252"/>
 </test>
 <test id="s1-s1-s1-s1-t2" name="Cenário 02: Listar imagens de uma raça específica (Hound)" line="12">
 <kw name="Listar imagens da raça &quot;hound&quot;" owner="dog_api_keywords" source_name="Listar imagens da raça &quot;${breed}&quot;">
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2025-12-18T16:15:32.974224" level="INFO">GET Request : url=https://dog.ceo/api/breed/hound/images 
+<msg time="2025-12-18T16:22:03.511692" level="INFO">GET Request : url=https://dog.ceo/api/breed/hound/images 
  path_url=/api/breed/hound/images 
  headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2025-12-18T16:15:32.974370" level="INFO">GET Response : url=https://dog.ceo/api/breed/hound/images 
+<msg time="2025-12-18T16:22:03.511830" level="INFO">GET Response : url=https://dog.ceo/api/breed/hound/images 
  status=200, reason=OK 
- headers={'Date': 'Thu, 18 Dec 2025 16:15:32 GMT', 'Content-Type': 'application/json', 'Content-Length': '3314', 'Connection': 'keep-alive', 'Server': 'cloudflare', 'X-Powered-By': 'PHP/8.3.28', 'Access-Control-Allow-Origin': '*', 'Content-Encoding': 'gzip', 'Via': '1.1 varnish (Varnish/6.3), 1.1 varnish (Varnish/6.3)', 'Cache-Control': 'max-age=1800', 'X-Cache-Age': '17404', 'X-Cache-Hits': '131', 'X-Cache': 'HIT', 'Accept-Ranges': 'bytes', 'Age': '0', 'Vary': 'Accept-Encoding', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'cf-cache-status': 'DYNAMIC', 'Speculation-Rules': '"/cdn-cgi/speculation"', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=O2Qyfag1ZQ7bGRQtwkUr%2B2sPbXFSi5HmD0s%2BatccWVOb4eC3x19IIW5%2F%2BY54TcnuK9hQX0cu0%2BmybLCTiZK1cDMtFMe46gQ%3D"}]}', 'CF-RAY': '9afff5a67fbf39ff-YYZ', 'alt-svc': 'h3=":443"; ma=86400'} 
+ headers={'Date': 'Thu, 18 Dec 2025 16:22:03 GMT', 'Content-Type': 'application/json', 'Content-Length': '3314', 'Connection': 'keep-alive', 'Server': 'cloudflare', 'X-Powered-By': 'PHP/8.3.28', 'Access-Control-Allow-Origin': '*', 'Content-Encoding': 'gzip', 'Via': '1.1 varnish (Varnish/6.3), 1.1 varnish (Varnish/6.3)', 'Cache-Control': 'max-age=1800', 'X-Cache-Age': '17794', 'X-Cache-Hits': '134', 'X-Cache': 'HIT', 'Accept-Ranges': 'bytes', 'Age': '0', 'Vary': 'Accept-Encoding', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'cf-cache-status': 'DYNAMIC', 'Speculation-Rules': '"/cdn-cgi/speculation"', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=rB6yyXjyWoJXM8%2BoM1jcNR1uHrIlqQn2v1kBiUtXs0ylYHiYXWDQCL81mIbSOVPZXarv7VK0lYWwdIXGpGm%2FZFghMTbFt38%3D"}]}', 'CF-RAY': '9affff2f595a8233-IAD', 'alt-svc': 'h3=":443"; ma=86400'} 
  body={"message":["https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_1003.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_10263.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_10715.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_10822.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_1128.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_1145.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_115.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_1150.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_11570.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_11584.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_1186.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_11953.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_1234.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_1259.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_12664.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_12879.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_12945.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_13145.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_13270.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_1335.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_13502.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_1357.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_1370.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_13879.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_13909.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_1406.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_1410.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_1459.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_1479.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_1592.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_1661.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_1724.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_173.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_1829.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_1882.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_1932.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_2062.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_2173.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_2458.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_251.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_2545.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_2626.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_2700.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_272.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_2738.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_2798.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_2803.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_305.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_3051.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_3057.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_3059.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_3080.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_3119.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_3159.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_3201.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_3233.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_3396.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_3400.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_3500.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_3564.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_357.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_3582.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_3588.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_3593.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_3629.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_3630.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_3653.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_3856.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_3858.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_392.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_3937.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_3944.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_3982.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_4037.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_4072.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_4143.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_4195.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_4230.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_4290.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_4307.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_4310.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_4352.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_4396.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_4434.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_4467.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_4501.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_4521.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_4598.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_472.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_4837.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_5080.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_515.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_5150.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_522.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_5381.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_5413.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_5436.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_5504.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_5927.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_60.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_6035.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_6241.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_6430.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_6485.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_649.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_6493.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_6690.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_688.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_7106.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_713.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_7146.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_7260.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_7683.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_7894.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_791.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_8063.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_8315.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_8465.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_890.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_907.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_908.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_913.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_980.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_986.jpg","https:\/\/images.dog.ceo\/breeds\/hound-afghan\/n02088094_988.jpg","https:\/\/images.dog.ceo\/breeds\/hound-basset\/n02088238_10005.jpg","https:\/\/images.dog.ceo\/breeds\/hound-basset\/n02088238_10013.jpg","https:\/\/images.dog.ceo\/breeds\/hound-basset\/n02088238_10028.jpg","https:\/\/images.dog.ceo\/breeds\/hound-basset\/n02088238_10051.jpg","https:\/\/images.dog.ceo\/breeds\/hound-basset\/n02088238_10054.jpg","https:\/\/images.dog.ceo\/breeds\/hound-basset\/n02088238_10063.jpg","https:\/\/images.dog.ceo\/breeds\/hound-basset\/n02088238_10072.jpg","https:\/\/images.dog.ceo\/breeds\/hound-basset\/n02088238_10095.jpg","https:\/\/images.dog.ceo\/breeds\/hound-basset\/n02088238_10102.jpg","https:\/\/images.dog.ceo\/breeds\/hound-basset\/n02088238_10110.jpg","https:\/\/images.dog.ceo\/breeds\/hound-basset\/n02088238_10113.jpg","https:\/\/images.dog.ceo\/breeds\/hound-basset\/n02088238_10129.jpg","https:\/\/images.dog.ceo\/breeds\/hound-basset\/n02088238_10140.jpg","https:\/\/images.dog.ceo\/breeds\/hound-basset\/n02088238_10142.jpg","https:\/\/images.dog.ceo\/breeds\/hound-basset\/n02088238_10288.jpg","https:\/\/images.dog.ceo\/breeds\/hound-basset\/n02088238_10338.jpg","https:\/\/images.dog.ceo\/breeds\/hound-basset\/n02088238_10358.jpg","https:\/\/images.dog.ceo\/breeds\/hound-basset\/n02088238_10451.jpg","https:\/\/images.dog.ceo\/breeds\/hound-basset\/n02088238_10473.jpg","https:\/\/images.dog.ceo\/breeds\/hound-b... (set the log level to DEBUG or TRACE to see the full content) 
  </msg>
-<msg time="2025-12-18T16:15:32.974702" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2025-12-18T16:22:03.512121" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>dog_api</arg>
 <arg>/breed/${breed}/images</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-12-18T16:15:32.867952" elapsed="0.106785"/>
+<status status="PASS" start="2025-12-18T16:22:03.413241" elapsed="0.098914"/>
 </kw>
 <return>
 <value>${response}</value>
-<status status="PASS" start="2025-12-18T16:15:32.974825" elapsed="0.000056"/>
+<status status="PASS" start="2025-12-18T16:22:03.512263" elapsed="0.000055"/>
 </return>
-<msg time="2025-12-18T16:15:32.975055" level="INFO">${res} = &lt;Response [200]&gt;</msg>
+<msg time="2025-12-18T16:22:03.512489" level="INFO">${res} = &lt;Response [200]&gt;</msg>
 <var>${res}</var>
-<status status="PASS" start="2025-12-18T16:15:32.867662" elapsed="0.107421"/>
+<status status="PASS" start="2025-12-18T16:22:03.412944" elapsed="0.099574"/>
 </kw>
 <kw name="Validar Estrutura de Sucesso" owner="dog_api_keywords">
 <kw name="Should Be Equal As Numbers" owner="BuiltIn">
-<msg time="2025-12-18T16:15:32.976327" level="INFO">Argument types are:
+<msg time="2025-12-18T16:22:03.513731" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${response.status_code}</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<status status="PASS" start="2025-12-18T16:15:32.975700" elapsed="0.000698"/>
+<status status="PASS" start="2025-12-18T16:22:03.513091" elapsed="0.000710"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${response.json()}[status]</arg>
 <arg>success</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-12-18T16:15:32.976514" elapsed="0.000883"/>
+<status status="PASS" start="2025-12-18T16:22:03.513918" elapsed="0.000890"/>
 </kw>
 <arg>${res}</arg>
-<status status="PASS" start="2025-12-18T16:15:32.975308" elapsed="0.002157"/>
+<status status="PASS" start="2025-12-18T16:22:03.512733" elapsed="0.002145"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${res.json()}[message][0]</arg>
 <arg>https://images.dog.ceo/breeds/</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2025-12-18T16:15:32.977592" elapsed="0.000997"/>
+<status status="PASS" start="2025-12-18T16:22:03.514986" elapsed="0.001007"/>
 </kw>
-<status status="PASS" start="2025-12-18T16:15:32.867048" elapsed="0.111684"/>
+<status status="PASS" start="2025-12-18T16:22:03.412394" elapsed="0.103741"/>
 </test>
 <test id="s1-s1-s1-s1-t3" name="Cenário 03: Buscar uma imagem aleatória de cachorro" line="17">
 <kw name="Buscar imagem aleatória" owner="dog_api_keywords">
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2025-12-18T16:15:33.089442" level="INFO">GET Request : url=https://dog.ceo/api/breeds/image/random 
+<msg time="2025-12-18T16:22:03.615445" level="INFO">GET Request : url=https://dog.ceo/api/breeds/image/random 
  path_url=/api/breeds/image/random 
  headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2025-12-18T16:15:33.089609" level="INFO">GET Response : url=https://dog.ceo/api/breeds/image/random 
+<msg time="2025-12-18T16:22:03.615576" level="INFO">GET Response : url=https://dog.ceo/api/breeds/image/random 
  status=200, reason=OK 
- headers={'Date': 'Thu, 18 Dec 2025 16:15:33 GMT', 'Content-Type': 'application/json', 'Content-Length': '104', 'Connection': 'keep-alive', 'Server': 'cloudflare', 'X-Powered-By': 'PHP/8.3.28', 'Cache-Control': 'no-cache, private', 'Access-Control-Allow-Origin': '*', 'Content-Encoding': 'gzip', 'Via': '1.1 varnish (Varnish/6.3), 1.1 varnish (Varnish/6.3)', 'X-Cache-Hits': '0', 'X-Cache': 'MISS', 'Accept-Ranges': 'bytes', 'Age': '0', 'Vary': 'Accept-Encoding', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'cf-cache-status': 'DYNAMIC', 'Speculation-Rules': '"/cdn-cgi/speculation"', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=oeP9Kpo0lyO84BRpTXLc7%2F0vkVckMpykvyGwhhQwP5MXengMfLcIvY1AUww0ETVKdt%2F9mHxt0062P4Ze6NxRFtwcjsBbxJs%3D"}]}', 'CF-RAY': '9afff5a7285339ff-YYZ', 'alt-svc': 'h3=":443"; ma=86400'} 
- body={"message":"https:\/\/images.dog.ceo\/breeds\/bakharwal-indian\/Bakharwal.jpg","status":"success"} 
+ headers={'Date': 'Thu, 18 Dec 2025 16:22:03 GMT', 'Content-Type': 'application/json', 'Content-Length': '116', 'Connection': 'keep-alive', 'Server': 'cloudflare', 'X-Powered-By': 'PHP/8.3.28', 'Cache-Control': 'no-cache, private', 'Access-Control-Allow-Origin': '*', 'Content-Encoding': 'gzip', 'Via': '1.1 varnish (Varnish/6.3), 1.1 varnish (Varnish/6.3)', 'X-Cache-Hits': '0', 'X-Cache': 'MISS', 'Accept-Ranges': 'bytes', 'Age': '0', 'Vary': 'Accept-Encoding', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'cf-cache-status': 'DYNAMIC', 'Speculation-Rules': '"/cdn-cgi/speculation"', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=HXXiSt3viB1uNNSUXoFA6T%2FHC0T%2Fz6pZDEq2FQ03d%2Fb4fLuBqc4tKldvGomHKRu4gYGARVTsvSCyuypXUuZw%2BBPB9q6XJf0%3D"}]}', 'CF-RAY': '9affff300a2b8233-IAD', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={"message":"https:\/\/images.dog.ceo\/breeds\/deerhound-scottish\/n02092002_3867.jpg","status":"success"} 
  </msg>
-<msg time="2025-12-18T16:15:33.089793" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2025-12-18T16:22:03.615752" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>dog_api</arg>
 <arg>/breeds/image/random</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-12-18T16:15:32.979816" elapsed="0.110009"/>
+<status status="PASS" start="2025-12-18T16:22:03.517046" elapsed="0.098737"/>
 </kw>
 <return>
 <value>${response}</value>
-<status status="PASS" start="2025-12-18T16:15:33.089912" elapsed="0.000053"/>
+<status status="PASS" start="2025-12-18T16:22:03.615866" elapsed="0.000053"/>
 </return>
-<msg time="2025-12-18T16:15:33.090132" level="INFO">${res} = &lt;Response [200]&gt;</msg>
+<msg time="2025-12-18T16:22:03.616080" level="INFO">${res} = &lt;Response [200]&gt;</msg>
 <var>${res}</var>
-<status status="PASS" start="2025-12-18T16:15:32.979536" elapsed="0.110623"/>
+<status status="PASS" start="2025-12-18T16:22:03.516806" elapsed="0.099301"/>
 </kw>
 <kw name="Validar Estrutura de Sucesso" owner="dog_api_keywords">
 <kw name="Should Be Equal As Numbers" owner="BuiltIn">
-<msg time="2025-12-18T16:15:33.091376" level="INFO">Argument types are:
+<msg time="2025-12-18T16:22:03.617310" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${response.status_code}</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<status status="PASS" start="2025-12-18T16:15:33.090763" elapsed="0.000683"/>
+<status status="PASS" start="2025-12-18T16:22:03.616689" elapsed="0.000690"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${response.json()}[status]</arg>
 <arg>success</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-12-18T16:15:33.091581" elapsed="0.000581"/>
+<status status="PASS" start="2025-12-18T16:22:03.617496" elapsed="0.000570"/>
 </kw>
 <arg>${res}</arg>
-<status status="PASS" start="2025-12-18T16:15:33.090379" elapsed="0.001848"/>
+<status status="PASS" start="2025-12-18T16:22:03.616340" elapsed="0.001790"/>
 </kw>
 <kw name="Should Match Regexp" owner="BuiltIn">
 <arg>${res.json()}[message]</arg>
 <arg>^https://.*\\.(jpg|jpeg|png)$</arg>
 <doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
-<status status="PASS" start="2025-12-18T16:15:33.092333" elapsed="0.000773"/>
+<status status="PASS" start="2025-12-18T16:22:03.618267" elapsed="0.000741"/>
 </kw>
-<status status="PASS" start="2025-12-18T16:15:32.978972" elapsed="0.114275"/>
+<status status="PASS" start="2025-12-18T16:22:03.516393" elapsed="0.102752"/>
 </test>
 <test id="s1-s1-s1-s1-t4" name="Cenário 04: Validar erro ao buscar raça inexistente" line="22">
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2025-12-18T16:15:33.199132" level="INFO">GET Request : url=https://dog.ceo/api/breed/raca_fantasma/images 
+<msg time="2025-12-18T16:22:03.713880" level="INFO">GET Request : url=https://dog.ceo/api/breed/raca_fantasma/images 
  path_url=/api/breed/raca_fantasma/images 
  headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2025-12-18T16:15:33.199264" level="INFO">GET Response : url=https://dog.ceo/api/breed/raca_fantasma/images 
+<msg time="2025-12-18T16:22:03.714000" level="INFO">GET Response : url=https://dog.ceo/api/breed/raca_fantasma/images 
  status=404, reason=Not Found 
- headers={'Date': 'Thu, 18 Dec 2025 16:15:33 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'cloudflare', 'X-Powered-By': 'PHP/8.3.28', 'Access-Control-Allow-Origin': '*', 'Via': '1.1 varnish (Varnish/6.3), 1.1 varnish (Varnish/6.3)', 'Cache-Control': 'max-age=1800', 'X-Cache-Age': '1049', 'X-Cache-Hits': '6', 'X-Cache': 'HIT', 'Age': '0', 'Vary': '', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'cf-cache-status': 'DYNAMIC', 'Speculation-Rules': '"/cdn-cgi/speculation"', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=eZiPywz2FDQ7nLfDATI6AZmehQPwAyuqTmDIYEj%2FiPhU%2FSPPST85yHxYRzSpUT6XpHmD20VuGxvG5GFM%2BvFYI6%2FEIayPu2s%3D"}]}', 'Content-Encoding': 'gzip', 'CF-RAY': '9afff5a7e8df39ff-YYZ', 'alt-svc': 'h3=":443"; ma=86400'} 
+ headers={'Date': 'Thu, 18 Dec 2025 16:22:03 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'cloudflare', 'X-Powered-By': 'PHP/8.3.28', 'Access-Control-Allow-Origin': '*', 'Via': '1.1 varnish (Varnish/6.3), 1.1 varnish (Varnish/6.3)', 'Cache-Control': 'max-age=1800', 'X-Cache-Age': '1439', 'X-Cache-Hits': '7', 'X-Cache': 'HIT', 'Age': '0', 'Vary': '', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'cf-cache-status': 'DYNAMIC', 'Speculation-Rules': '"/cdn-cgi/speculation"', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=LHqSRC%2Bc%2BQjpqQhjQPAlD7Z6%2B5WbsV%2Fvu%2F6wyRaEJ7stsTJisx%2FA1c%2B1W37eEEVLTHzuVGgv%2BXSclICMqjGSHTCT%2FqW289U%3D"}]}', 'Content-Encoding': 'gzip', 'CF-RAY': '9affff30aad98233-IAD', 'alt-svc': 'h3=":443"; ma=86400'} 
  body={"status":"error","message":"Breed not found (main breed does not exist)","code":404} 
  </msg>
-<msg time="2025-12-18T16:15:33.199452" level="INFO">${res} = &lt;Response [404]&gt;</msg>
+<msg time="2025-12-18T16:22:03.714180" level="INFO">${res} = &lt;Response [404]&gt;</msg>
 <var>${res}</var>
 <arg>dog_api</arg>
 <arg>/breed/raca_fantasma/images</arg>
 <arg>expected_status=404</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-12-18T16:15:33.094004" elapsed="0.105482"/>
+<status status="PASS" start="2025-12-18T16:22:03.619851" elapsed="0.094378"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${res.json()}[status]</arg>
 <arg>error</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-12-18T16:15:33.199751" elapsed="0.000829"/>
+<status status="PASS" start="2025-12-18T16:22:03.714445" elapsed="0.000800"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${res.json()}[message]</arg>
 <arg>Breed not found (main breed does not exist)</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-12-18T16:15:33.200708" elapsed="0.000584"/>
+<status status="PASS" start="2025-12-18T16:22:03.715371" elapsed="0.000578"/>
 </kw>
-<status status="PASS" start="2025-12-18T16:15:33.093485" elapsed="0.107947"/>
+<status status="PASS" start="2025-12-18T16:22:03.619400" elapsed="0.096691"/>
 </test>
 <test id="s1-s1-s1-s1-t5" name="Cenário 05: Validar tempo de resposta (SLA)" line="27">
 <kw name="Buscar imagem aleatória" owner="dog_api_keywords">
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2025-12-18T16:15:33.311640" level="INFO">GET Request : url=https://dog.ceo/api/breeds/image/random 
+<msg time="2025-12-18T16:22:03.817850" level="INFO">GET Request : url=https://dog.ceo/api/breeds/image/random 
  path_url=/api/breeds/image/random 
  headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2025-12-18T16:15:33.311861" level="INFO">GET Response : url=https://dog.ceo/api/breeds/image/random 
+<msg time="2025-12-18T16:22:03.818019" level="INFO">GET Response : url=https://dog.ceo/api/breeds/image/random 
  status=200, reason=OK 
- headers={'Date': 'Thu, 18 Dec 2025 16:15:33 GMT', 'Content-Type': 'application/json', 'Content-Length': '106', 'Connection': 'keep-alive', 'Server': 'cloudflare', 'X-Powered-By': 'PHP/8.3.28', 'Cache-Control': 'no-cache, private', 'Access-Control-Allow-Origin': '*', 'Content-Encoding': 'gzip', 'Via': '1.1 varnish (Varnish/6.3), 1.1 varnish (Varnish/6.3)', 'X-Cache-Hits': '0', 'X-Cache': 'MISS', 'Accept-Ranges': 'bytes', 'Age': '0', 'Vary': 'Accept-Encoding', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'cf-cache-status': 'DYNAMIC', 'Speculation-Rules': '"/cdn-cgi/speculation"', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=BrQ8axrqOTX2rwHU7yuNLy5SPYDGvUr7qS60CQMqu%2B8WVwpId4rPbElRQDApYPFFU1XO2z9tcszlSXE4uKv7RAqQ5Qo5OFM%3D"}]}', 'CF-RAY': '9afff5a8896539ff-YYZ', 'alt-svc': 'h3=":443"; ma=86400'} 
- body={"message":"https:\/\/images.dog.ceo\/breeds\/clumber\/n02101556_7351.jpg","status":"success"} 
+ headers={'Date': 'Thu, 18 Dec 2025 16:22:03 GMT', 'Content-Type': 'application/json', 'Content-Length': '106', 'Connection': 'keep-alive', 'Server': 'cloudflare', 'X-Powered-By': 'PHP/8.3.28', 'Cache-Control': 'no-cache, private', 'Access-Control-Allow-Origin': '*', 'Content-Encoding': 'gzip', 'Via': '1.1 varnish (Varnish/6.3), 1.1 varnish (Varnish/6.3)', 'X-Cache-Hits': '0', 'X-Cache': 'MISS', 'Accept-Ranges': 'bytes', 'Age': '0', 'Vary': 'Accept-Encoding', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'cf-cache-status': 'DYNAMIC', 'Speculation-Rules': '"/cdn-cgi/speculation"', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=vbEUW7cJOJUNhrO%2BKmrO%2F3e8ld5zfZ2VquvA2jSZEMR0CHCwHh%2FvL1rBwxuVPfTXJNFsNpmTE7bJat6IrTkgzYRnaEPIBFY%3D"}]}', 'CF-RAY': '9affff314b8d8233-IAD', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={"message":"https:\/\/images.dog.ceo\/breeds\/rajapalayam-indian\/Rajapalayam-dog.jpg","status":"success"} 
  </msg>
-<msg time="2025-12-18T16:15:33.312052" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2025-12-18T16:22:03.818182" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>dog_api</arg>
 <arg>/breeds/image/random</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-12-18T16:15:33.202409" elapsed="0.109676"/>
+<status status="PASS" start="2025-12-18T16:22:03.717122" elapsed="0.101110"/>
 </kw>
 <return>
 <value>${response}</value>
-<status status="PASS" start="2025-12-18T16:15:33.312177" elapsed="0.000057"/>
+<status status="PASS" start="2025-12-18T16:22:03.818317" elapsed="0.000054"/>
 </return>
-<msg time="2025-12-18T16:15:33.312417" level="INFO">${res} = &lt;Response [200]&gt;</msg>
+<msg time="2025-12-18T16:22:03.818544" level="INFO">${res} = &lt;Response [200]&gt;</msg>
 <var>${res}</var>
-<status status="PASS" start="2025-12-18T16:15:33.202154" elapsed="0.110291"/>
+<status status="PASS" start="2025-12-18T16:22:03.716865" elapsed="0.101707"/>
 </kw>
 <kw name="Convert To Number" owner="BuiltIn">
-<msg time="2025-12-18T16:15:33.313404" level="INFO">${response_time} = 108.416</msg>
+<msg time="2025-12-18T16:22:03.819490" level="INFO">${response_time} = 99.96199999999999</msg>
 <var>${response_time}</var>
 <arg>${res.elapsed.total_seconds() * 1000}</arg>
 <doc>Converts the given item to a floating point number.</doc>
-<status status="PASS" start="2025-12-18T16:15:33.312648" elapsed="0.000786"/>
+<status status="PASS" start="2025-12-18T16:22:03.818741" elapsed="0.000780"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>${response_time} &lt; 2000</arg>
 <arg>O tempo de resposta foi ${response_time}ms</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2025-12-18T16:15:33.313576" elapsed="0.000432"/>
+<status status="PASS" start="2025-12-18T16:22:03.819638" elapsed="0.000403"/>
 </kw>
-<status status="PASS" start="2025-12-18T16:15:33.201704" elapsed="0.112452"/>
+<status status="PASS" start="2025-12-18T16:22:03.716358" elapsed="0.103824"/>
 </test>
 <test id="s1-s1-s1-s1-t6" name="Cenário 06: Validar se o retorno é um JSON válido" line="32">
 <kw name="Listar todas as raças" owner="dog_api_keywords">
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2025-12-18T16:15:33.419594" level="INFO">GET Request : url=https://dog.ceo/api/breeds/list/all 
+<msg time="2025-12-18T16:22:03.917474" level="INFO">GET Request : url=https://dog.ceo/api/breeds/list/all 
  path_url=/api/breeds/list/all 
  headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2025-12-18T16:15:33.419731" level="INFO">GET Response : url=https://dog.ceo/api/breeds/list/all 
+<msg time="2025-12-18T16:22:03.917595" level="INFO">GET Response : url=https://dog.ceo/api/breeds/list/all 
  status=200, reason=OK 
- headers={'Date': 'Thu, 18 Dec 2025 16:15:33 GMT', 'Content-Type': 'application/json', 'Content-Length': '1057', 'Connection': 'keep-alive', 'Server': 'cloudflare', 'X-Powered-By': 'PHP/8.3.28', 'Access-Control-Allow-Origin': '*', 'Content-Encoding': 'gzip', 'Via': '1.1 varnish (Varnish/6.3), 1.1 varnish (Varnish/6.3)', 'Cache-Control': 'max-age=1800', 'X-Cache-Age': '10982', 'X-Cache-Hits': '3056', 'X-Cache': 'HIT', 'Accept-Ranges': 'bytes', 'Age': '0', 'Vary': 'Accept-Encoding', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'cf-cache-status': 'DYNAMIC', 'Speculation-Rules': '"/cdn-cgi/speculation"', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=4Yri1QvQFrIZq6rBPNj8FOudIPknq0o1dqz5CrlErLQhSTtASUntqEPavRJ93%2Fr%2F%2Fb9zoVxjrJsMeWNOstsgZ69ZZqtrK3k%3D"}]}', 'CF-RAY': '9afff5a949fd39ff-YYZ', 'alt-svc': 'h3=":443"; ma=86400'} 
+ headers={'Date': 'Thu, 18 Dec 2025 16:22:03 GMT', 'Content-Type': 'application/json', 'Content-Length': '1057', 'Connection': 'keep-alive', 'Server': 'cloudflare', 'X-Powered-By': 'PHP/8.3.28', 'Access-Control-Allow-Origin': '*', 'Content-Encoding': 'gzip', 'Via': '1.1 varnish (Varnish/6.3), 1.1 varnish (Varnish/6.3)', 'Cache-Control': 'max-age=1800', 'X-Cache-Age': '11373', 'X-Cache-Hits': '3185', 'X-Cache': 'HIT', 'Accept-Ranges': 'bytes', 'Age': '0', 'Vary': 'Accept-Encoding', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'cf-cache-status': 'DYNAMIC', 'Speculation-Rules': '"/cdn-cgi/speculation"', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=za2oMN9KS%2BCDUMt8yW3lQ1nh5eWPzrMC%2B6jji6RALdwU%2BXYuN349wSzhaPxEhQPRwmIFnLWrGx2VMupLXgs5d%2Br2PpBDLlo%3D"}]}', 'CF-RAY': '9affff31ec398233-IAD', 'alt-svc': 'h3=":443"; ma=86400'} 
  body={"message":{"affenpinscher":[],"african":["wild"],"airedale":[],"akita":[],"appenzeller":[],"australian":["kelpie","shepherd"],"bakharwal":["indian"],"basenji":[],"beagle":[],"bluetick":[],"borzoi":[],"bouvier":[],"boxer":[],"brabancon":[],"briard":[],"buhund":["norwegian"],"bulldog":["boston","english","french"],"bullterrier":["staffordshire"],"cattledog":["australian"],"cavapoo":[],"chihuahua":[],"chippiparai":["indian"],"chow":[],"clumber":[],"cockapoo":[],"collie":["border"],"coonhound":[],"corgi":["cardigan"],"cotondetulear":[],"dachshund":[],"dalmatian":[],"dane":["great"],"danish":["swedish"],"deerhound":["scottish"],"dhole":[],"dingo":[],"doberman":[],"elkhound":["norwegian"],"entlebucher":[],"eskimo":[],"finnish":["lapphund"],"frise":["bichon"],"gaddi":["indian"],"german":["shepherd"],"greyhound":["indian","italian"],"groenendael":[],"havanese":[],"hound":["afghan","basset","blood","english","ibizan","plott","walker"],"husky":[],"keeshond":[],"kelpie":[],"kombai":[],"komondor":[],"kuvasz":[],"labradoodle":[],"labrador":[],"leonberg":[],"lhasa":[],"malamute":[],"malinois":[],"maltese":[],"mastiff":["bull","english","indian","tibetan"],"mexicanhairless":[],"mix":[],"mountain":["bernese","swiss"],"mudhol":["indian"],"newfoundland":[],"otterhound":[],"ovcharka":["caucasian"],"papillon":[],"pariah":["indian"],"pekinese":[],"pembroke":[],"pinscher":["miniature"],"pitbull":[],"pointer":["german","germanlonghair"],"pomeranian":[],"poodle":["medium","miniature","standard","toy"],"pug":[],"puggle":[],"pyrenees":[],"rajapalayam":["indian"],"redbone":[],"retriever":["chesapeake","curly","flatcoated","golden"],"ridgeback":["rhodesian"],"rottweiler":[],"rough":["collie"],"saluki":[],"samoyed":[],"schipperke":[],"schnauzer":["giant","miniature"],"segugio":["italian"],"setter":["english","gordon","irish"],"sharpei":[],"sheepdog":["english","indian","shetland"],"shiba":[],"shihtzu":[],"spaniel":["blenheim","brittany","cocker","irish","japanese","sussex","welsh"],"spitz":["indian","japanese"],"springer":["english"],"stbernard":[],"terrier":["american","andalusian","australian","bedlington","border","boston","cairn","dandie","fox","irish","kerryblue","lakeland","norfolk","norwich","patterdale","russell","scottish","sealyham","silky","tibetan","toy","welsh","westhighland","wheaten","yorkshire"],"tervuren":[],"vizsla":[],"waterdog":["spanish"],"weimaraner":[],"whippet":[],"wolfhound":["irish"]},"status":"success"} 
  </msg>
-<msg time="2025-12-18T16:15:33.419933" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2025-12-18T16:22:03.917788" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>dog_api</arg>
 <arg>/breeds/list/all</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-12-18T16:15:33.315151" elapsed="0.104815"/>
+<status status="PASS" start="2025-12-18T16:22:03.821231" elapsed="0.096589"/>
 </kw>
 <return>
 <value>${response}</value>
-<status status="PASS" start="2025-12-18T16:15:33.420055" elapsed="0.000055"/>
+<status status="PASS" start="2025-12-18T16:22:03.917904" elapsed="0.000054"/>
 </return>
-<msg time="2025-12-18T16:15:33.420280" level="INFO">${res} = &lt;Response [200]&gt;</msg>
+<msg time="2025-12-18T16:22:03.918124" level="INFO">${res} = &lt;Response [200]&gt;</msg>
 <var>${res}</var>
-<status status="PASS" start="2025-12-18T16:15:33.314900" elapsed="0.105407"/>
+<status status="PASS" start="2025-12-18T16:22:03.820968" elapsed="0.097184"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-12-18T16:15:33.421073" level="INFO">${content_type} = application/json</msg>
+<msg time="2025-12-18T16:22:03.918902" level="INFO">${content_type} = application/json</msg>
 <var>${content_type}</var>
 <arg>${res.headers}</arg>
 <arg>Content-Type</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-12-18T16:15:33.420481" elapsed="0.000621"/>
+<status status="PASS" start="2025-12-18T16:22:03.918349" elapsed="0.000583"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${content_type}</arg>
 <arg>application/json</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2025-12-18T16:15:33.421223" elapsed="0.000436"/>
+<status status="PASS" start="2025-12-18T16:22:03.919051" elapsed="0.000408"/>
 </kw>
-<status status="PASS" start="2025-12-18T16:15:33.314398" elapsed="0.107405"/>
+<status status="PASS" start="2025-12-18T16:22:03.820434" elapsed="0.099163"/>
 </test>
-<status status="PASS" start="2025-12-18T16:15:32.390112" elapsed="1.032242"/>
+<status status="PASS" start="2025-12-18T16:22:02.881919" elapsed="1.038239"/>
 </suite>
-<status status="PASS" start="2025-12-18T16:15:32.389108" elapsed="1.034055"/>
+<status status="PASS" start="2025-12-18T16:22:02.880879" elapsed="1.040053"/>
 </suite>
-<status status="PASS" start="2025-12-18T16:15:32.387936" elapsed="1.035910"/>
+<status status="PASS" start="2025-12-18T16:22:02.879570" elapsed="1.042032"/>
 </suite>
-<status status="PASS" start="2025-12-18T16:15:32.358256" elapsed="1.066226"/>
+<status status="PASS" start="2025-12-18T16:22:02.850838" elapsed="1.071395"/>
 </suite>
 <statistics>
 <total>
